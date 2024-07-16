@@ -1,29 +1,31 @@
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <a>Send Money</a>
+        <NavLink to={"/sendMoney"}>Send Money</NavLink>
       </li>
       <li>
-        <a>Cash Out</a>
+        <NavLink to={"/cashOut"}>Cash Out</NavLink>
       </li>
       <li>
-        <a>Cash In</a>
+        <NavLink to={"/cashIn"}>Cash In</NavLink>
       </li>
       <li>
-        <a>Balance Check</a>
+        <NavLink to={"/balance"}>Balance Check</NavLink>
       </li>
       <li>
-        <a>History</a>
+        <NavLink to={"/history"}>History</NavLink>
       </li>
       <li>
-        <a>Transition Management</a>
+        <NavLink to={"/transitionManage"}>Transition Management</NavLink>
       </li>
       <li>
-        <a>User Management</a>
+        <NavLink to={"/userManage"}>User Management</NavLink>
       </li>
       <li>
-        <a>System Management</a>
+        <NavLink to={"/systemManage"}>System Management</NavLink>
       </li>
     </>
   );
