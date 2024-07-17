@@ -10,6 +10,8 @@ import History from "../Pages/History/History";
 import TransitionManageAgent from "../Pages/TransitionManageAgent/TransitionManageAgent";
 import UserManage from "../Pages/UserManage/UserManage";
 import SystemManage from "../Pages/SystemManage/SystemManage";
+import Register from "../Pages/Register/Register";
+import Login from "../Pages/Login/Login";
 
 export const Router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ export const Router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>
+        },
+        {
+            path: '/register',
+            element: <Register></Register>
+        },
+        {
+            path: '/login',
+            element: <Login></Login>
         },
         {
             path: '/sendMoney',

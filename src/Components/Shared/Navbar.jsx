@@ -1,31 +1,70 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to={"/sendMoney"}>Send Money</NavLink>
+        <NavLink           className={({ isActive }) =>
+            isActive
+              ? "border border-[#2EE9B1] hover:bg-[#00247A] hover:text-white rounded-md py-[7px] px-3"
+              : "py-[7px] px-3"
+          } to={"/"}>Home</NavLink>
       </li>
       <li>
-        <NavLink to={"/cashOut"}>Cash Out</NavLink>
+        <NavLink           className={({ isActive }) =>
+            isActive
+              ? "border border-[#2EE9B1] hover:bg-[#00247A] hover:text-white rounded-md py-[7px] px-3"
+              : "py-[7px] px-3"
+          } to={"/sendMoney"}>Send Money</NavLink>
       </li>
       <li>
-        <NavLink to={"/cashIn"}>Cash In</NavLink>
+        <NavLink           className={({ isActive }) =>
+            isActive
+              ? "border border-[#2EE9B1] hover:bg-[#00247A] hover:text-white rounded-md py-[7px] px-3"
+              : "py-[7px] px-3"
+          } to={"/cashOut"}>Cash Out</NavLink>
       </li>
       <li>
-        <NavLink to={"/balance"}>Balance Check</NavLink>
+        <NavLink           className={({ isActive }) =>
+            isActive
+              ? "border border-[#2EE9B1] hover:bg-[#00247A] hover:text-white rounded-md py-[7px] px-3"
+              : "py-[7px] px-3"
+          } to={"/cashIn"}>Cash In</NavLink>
       </li>
       <li>
-        <NavLink to={"/history"}>History</NavLink>
+        <NavLink           className={({ isActive }) =>
+            isActive
+              ? "border border-[#2EE9B1] hover:bg-[#00247A] hover:text-white rounded-md py-[7px] px-3"
+              : "py-[7px] px-3"
+          } to={"/balance"}>Balance Check</NavLink>
       </li>
       <li>
-        <NavLink to={"/transitionManage"}>Transition Management</NavLink>
+        <NavLink           className={({ isActive }) =>
+            isActive
+              ? "border border-[#2EE9B1] hover:bg-[#00247A] hover:text-white rounded-md py-[7px] px-3"
+              : "py-[7px] px-3"
+          } to={"/history"}>History</NavLink>
       </li>
       <li>
-        <NavLink to={"/userManage"}>User Management</NavLink>
+        <NavLink           className={({ isActive }) =>
+            isActive
+              ? "border border-[#2EE9B1] hover:bg-[#00247A] hover:text-white rounded-md py-[7px] px-3"
+              : "py-[7px] px-3"
+          } to={"/transitionManage"}>Transition Management</NavLink>
       </li>
       <li>
-        <NavLink to={"/systemManage"}>System Management</NavLink>
+        <NavLink           className={({ isActive }) =>
+            isActive
+              ? "border border-[#2EE9B1] hover:bg-[#00247A] hover:text-white rounded-md py-[7px] px-3"
+              : "py-[7px] px-3"
+          } to={"/userManage"}>User Management</NavLink>
+      </li>
+      <li>
+        <NavLink           className={({ isActive }) =>
+            isActive
+              ? "border border-[#2EE9B1] hover:bg-[#00247A] hover:text-white rounded-md py-[7px] px-3"
+              : "py-[7px] px-3"
+          } to={"/systemManage"}>System Management</NavLink>
       </li>
     </>
   );
@@ -52,18 +91,18 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu z-30 text-[#2EE9B1] menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">QuickCash</a>
+        <Link to={'/'} className="btn btn-ghost text-xl">QuickCash</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className="menu-horizontal px-1 gap-1 items-center font-semibold">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <Link to={'/register'}><button className="btn">Register</button></Link>
       </div>
     </div>
   );
